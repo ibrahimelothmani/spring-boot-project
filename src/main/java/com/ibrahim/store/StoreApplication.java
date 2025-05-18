@@ -10,6 +10,7 @@ public class StoreApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
+        ApplicationContext context2 = SpringApplication.run(StoreApplication.class, args);
         // Using Bean
         // A bean is an object created by Spring Core => IoC
 //        var orderService = context.getBean(OrderService.class);
@@ -27,5 +28,6 @@ public class StoreApplication {
 //        context.getBean(NotificationManager.class).sending("Notification is SEND");
 
         context.getBean(OrderService.class).placeOrder();
+        context2.getBean(OrderService.class).placeOrder();
     }
 }
