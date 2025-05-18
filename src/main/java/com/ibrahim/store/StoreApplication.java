@@ -1,5 +1,7 @@
 package com.ibrahim.store;
 
+import com.ibrahim.store.Exercise.User;
+import com.ibrahim.store.Exercise.UserService;
 import com.ibrahim.store.Notification.NotificationManager;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,8 +30,13 @@ public class StoreApplication {
 
 //        context.getBean(NotificationManager.class).sending("Notification is SEND");
 
-        context.getBean(OrderService.class).placeOrder();
+//        context.getBean(OrderService.class).placeOrder();
 //        context2.getBean(OrderService.class).placeOrder();
-        context.close();
+//        context.close();
+
+        var userService = context.getBean(UserService.class);
+        userService.registerUser(new User(1L, "ibrahim@gmail.com", "2025", "Ibrahim"));
+        userService.registerUser(new User(1L, "ibrahim@gmail.com", "2025", "Ibrahim"));
+
     }
 }

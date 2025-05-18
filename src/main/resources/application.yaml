@@ -9,3 +9,7 @@ stripe:
   support-currencies: TND, ALG, USD, EUR
 
 payment-gateway: paypal
+
+mail:
+  host: https://stmp.gmail.com
+  port: 5761
