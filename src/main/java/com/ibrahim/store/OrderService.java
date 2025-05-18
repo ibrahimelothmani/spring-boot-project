@@ -1,5 +1,7 @@
 package com.ibrahim.store;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -28,4 +30,14 @@ public class OrderService {
     public void placeOrder() {
         paymentService.processPayment(200);
     }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("OrderService PostConstruct");
+    }
+
+    @PreDestroy
+    public void cleanUp(){
+        System.out.println("OrderService PreDestroy");
+    } // this will not show in the console
 }
