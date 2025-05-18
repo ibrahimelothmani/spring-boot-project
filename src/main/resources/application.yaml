@@ -7,3 +7,5 @@ stripe:
   enable: true
   timeout: 1000
   support-currencies: TND, ALG, USD, EUR
+
+payment-gateway: paypal

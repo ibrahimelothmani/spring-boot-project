@@ -24,7 +24,8 @@ public class StoreApplication {
 //        var notification = new NotificationManager();
 //        notification.sending("Notification is SEND");
 
-        context.getBean(NotificationManager.class).sending("Notification is SEND");
+//        context.getBean(NotificationManager.class).sending("Notification is SEND");
 
+        context.getBean(OrderService.class).placeOrder();
     }
 }

@@ -6,8 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 
-@Service
-//@RequiredArgsConstructor
+//@Service
 public class OrderService {
     private PaymentService paymentService;
 
@@ -15,8 +14,8 @@ public class OrderService {
 
     // when we declare 2 beans we get error because spring is confused between chosen PayPalPaymentService and StripPaymentService
     // => so for that we use the annotation @Primary OR @Qualifier
-    @Autowired
-    public OrderService(@Qualifier("paypal") PaymentService paymentService) {
+
+    public OrderService(PaymentService paymentService) {
         this.paymentService = paymentService;
     }
 
