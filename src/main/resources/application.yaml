@@ -1,12 +1,16 @@
 spring:
   application:
     name: store
+  datasource:
+    url: jdbc:mysql://localhost:5432/store?createDatabaseIfNotExist=true
+    username: postgres
+    password: postgres
 
 stripe:
   apiUrl: https://api.stripe.com
-  enable: true
-  timeout: 1000
-  support-currencies: TND, ALG, USD, EUR
+#  enable: true
+#  timeout: 1000
+#  support-currencies: TND, ALG, USD, EUR
 
 payment-gateway: paypal
 

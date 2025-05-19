@@ -12,7 +12,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class StoreApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(StoreApplication.class, args);
+//        ConfigurableApplicationContext context = SpringApplication.run(StoreApplication.class, args);
 //        ApplicationContext context2 = SpringApplication.run(StoreApplication.class, args);
         // Using Bean
         // A bean is an object created by Spring Core => IoC
@@ -34,9 +34,10 @@ public class StoreApplication {
 //        context2.getBean(OrderService.class).placeOrder();
 //        context.close();
 
-        var userService = context.getBean(UserService.class);
-        userService.registerUser(new User(1L, "ibrahim@gmail.com", "2025", "Ibrahim"));
-        userService.registerUser(new User(1L, "ibrahim@gmail.com", "2025", "Ibrahim"));
+//        var userService = context.getBean(UserService.class);
+//        userService.registerUser(new User(1L, "ibrahim@gmail.com", "2025", "Ibrahim"));
+//        userService.registerUser(new User(1L, "ibrahim@gmail.com", "2025", "Ibrahim"));
 
+        ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
     }
 }
