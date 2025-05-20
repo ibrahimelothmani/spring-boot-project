@@ -1,10 +1,10 @@
-create table location (
-    id       bigint auto_increment
-        primary key,
-    name     varchar(255) not null,
-    latitude double not null,
-    longitude double not null,
-    user_id  bigint       not null,
-    constraint location_users_id_fk
-        foreign key (user_id) references users (id)
+CREATE TABLE location
+(
+    id        BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name      VARCHAR(255)     NOT NULL,
+    latitude  DOUBLE PRECISION NOT NULL,
+    longitude DOUBLE PRECISION NOT NULL,
+    user_id   BIGINT           NOT NULL,
+    CONSTRAINT location_users_id_fk
+        FOREIGN KEY (user_id) REFERENCES users (id)
 );

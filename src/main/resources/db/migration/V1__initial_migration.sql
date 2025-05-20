@@ -1,20 +1,18 @@
-create table users
+CREATE TABLE users
 (
-    id       bigint auto_increment
-        primary key,
-    name     varchar(255) not null,
-    email    varchar(255) not null,
-    password varchar(255) not null
+    id       BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name     VARCHAR(255) NOT NULL,
+    email    VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
 );
 
-create table addresses
+CREATE TABLE addresses
 (
-    id      bigint auto_increment
-        primary key,
-    street  varchar(255) not null,
-    city    varchar(255) not null,
-    zip     varchar(255) not null,
-    user_id bigint       not null,
-    constraint addresses_users_id_fk
-        foreign key (user_id) references users (id)
+    id      BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    street  VARCHAR(255) NOT NULL,
+    city    VARCHAR(255) NOT NULL,
+    zip     VARCHAR(255) NOT NULL,
+    user_id BIGINT       NOT NULL,
+    CONSTRAINT addresses_users_id_fk
+        FOREIGN KEY (user_id) REFERENCES users (id)
 );
