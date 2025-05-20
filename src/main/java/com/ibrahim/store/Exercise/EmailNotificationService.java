@@ -12,9 +12,9 @@ public class EmailNotificationService implements NotificationService {
      * @param recipientEmail
      */
 
-    @Value("${email.server.host}")
+    @Value("${mail.host}")
     private String host;
-    @Value("${email.server.port}")
+    @Value("${mail.port}")
     private String port;
 
     @Override

@@ -38,6 +38,6 @@ public class StoreApplication {
 //        userService.registerUser(new User(1L, "ibrahim@gmail.com", "2025", "Ibrahim"));
 //        userService.registerUser(new User(1L, "ibrahim@gmail.com", "2025", "Ibrahim"));
 
-        ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
+        SpringApplication.run(StoreApplication.class, args);
     }
 }
